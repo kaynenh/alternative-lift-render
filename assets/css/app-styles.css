@@ -1,0 +1,55 @@
+img {
+    max-width: 100%;
+}
+
+/*
+ * Rules to show only personalized Content from API
+ */
+.personalized {
+    visibility: hidden !important;
+}
+
+.loadedPersonalization {
+    visibility: visible !important;
+}
+
+.personalized > * {
+    visibility: hidden !important;
+}
+
+.personalized > .personalizedFromAPI {
+    visibility: visible !important;
+}
+
+/*
+ * Rules to hide content with Experience Builder open as to not confuse the editor
+ */
+
+.lift-tools-active .lift-static {
+    visibility: visible !important;
+    position: relative;
+}
+
+.lift-tools-active .lift-card-outer iframe {
+    opacity: 0.6;
+    width: inherit !important;
+    height: inherit !important;
+}
+
+.lift-tools-active.lift-slot-active .replaced {
+    display: none;
+}
+
+.lift-tools-active .lift-static > iframe,
+.lift-tools-active .lift-static > * {
+    visibility: hidden !important;
+}
+
+.lift-tools-active .lift-static > .replaced {
+    visibility: visible !important;
+}
+
+.lift-tools-active.lift-slot-active .lift-static > iframe {
+    display: block;
+}
+
